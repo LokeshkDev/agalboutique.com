@@ -41,6 +41,11 @@
   "image": "assets/img/logo.png",
   "priceRange": "$$",
   "currenciesAccepted": "INR",
+  "sameAs": [
+    "https://www.instagram.com/agalboutique2023/",
+    "https://www.facebook.com/p/Agal-boutique-61577607116632/",
+    "https://www.youtube.com/@agalboutique1695"
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Plus Size Premium Ethnic Wear",
@@ -260,6 +265,7 @@ h1{
 .btn-call:hover{box-shadow:0 8px 24px rgb(227 23 75 / .45)}
 .btn-ig:hover{box-shadow:0 8px 24px rgb(225 48 108 / .45)}
 .btn-fb:hover{box-shadow:0 8px 24px rgb(24 119 242 / .45)}
+.btn-yt:hover{box-shadow:0 8px 24px rgb(255 0 0 / .45)}
 
 .count{display:none;gap:8px;font-variant-numeric:tabular-nums}
 .count.on{display:flex}
@@ -466,21 +472,25 @@ h1{
       <span class="btn btn-status"><i class="dot" aria-hidden="true"></i>Comming Soon</span>
 
       <div class="social-group" role="group" aria-label="Social and Contact Options">
-        <a class="social-btn btn-wa" id="wa" href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+        <a class="social-btn btn-wa" id="wa" href="https://wa.me/916379589711" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
           <img src="assets/img/whatsapp.svg" width="24" height="24" alt="WhatsApp">
           <span>WhatsApp</span>
         </a>
-        <a class="social-btn btn-call" id="call" href="tel:+919876543210" aria-label="Call Agal Boutique" title="Call Us">
+        <a class="social-btn btn-call" id="call" href="tel:+91 6379589711" aria-label="Call Agal Boutique" title="Call Us">
           <img src="assets/img/call.svg" width="24" height="24" alt="Call">
           <span>Call</span>
         </a>
-        <a class="social-btn btn-ig" id="ig" href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram" title="Follow on Instagram">
+        <a class="social-btn btn-ig" id="ig" href="https://www.instagram.com/agalboutique2023/" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram" title="Follow on Instagram">
           <img src="assets/img/instagram.svg" width="24" height="24" alt="Instagram">
           <span>Instagram</span>
         </a>
-        <a class="social-btn btn-fb" id="fb" href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Follow on Facebook" title="Follow on Facebook">
+        <a class="social-btn btn-fb" id="fb" href="https://www.facebook.com/p/Agal-boutique-61577607116632/" target="_blank" rel="noopener noreferrer" aria-label="Follow on Facebook" title="Follow on Facebook">
           <img src="assets/img/facebook.svg" width="24" height="24" alt="Facebook">
           <span>Facebook</span>
+        </a>
+        <a class="social-btn btn-yt" id="yt" href="https://www.youtube.com/@agalboutique1695" target="_blank" rel="noopener noreferrer" aria-label="Subscribe on YouTube" title="Subscribe on YouTube">
+          <img src="assets/img/youtube.svg" width="24" height="24" alt="YouTube">
+          <span>YouTube</span>
         </a>
       </div>
     </div>
@@ -496,13 +506,15 @@ h1{
    phone    : telephone number with country code, e.g. "+919876543210"
    instagram: full profile URL, e.g. "https://instagram.com/yourpage"
    facebook : full Facebook page URL, e.g. "https://facebook.com/yourpage"
+   youtube  : full YouTube channel URL, e.g. "https://youtube.com/@yourchannel"
    launch   : date and time with offset, e.g. "2026-11-15T10:00:00+05:30"
 ------------------------------------------------------------------- */
 const CONFIG = {
-  whatsapp: "919876543210",
-  phone: "+919876543210",
-  instagram: "https://instagram.com/",
-  facebook: "https://facebook.com/",
+  whatsapp: "916379589711",
+  phone: "+91 6379589711",
+  instagram: "https://www.instagram.com/agalboutique2023/",
+  facebook: "https://www.facebook.com/p/Agal-boutique-61577607116632/",
+  youtube: "https://www.youtube.com/@agalboutique1695",
   launch: ""
 };
 
@@ -529,6 +541,7 @@ const CONFIG = {
   const call = document.getElementById("call");
   const ig = document.getElementById("ig");
   const fb = document.getElementById("fb");
+  const yt = document.getElementById("yt");
 
   if (wa && CONFIG.whatsapp) {
     const num = CONFIG.whatsapp.replace(/\D/g, "");
@@ -544,6 +557,9 @@ const CONFIG = {
   }
   if (fb && CONFIG.facebook) {
     fb.href = CONFIG.facebook;
+  }
+  if (yt && CONFIG.youtube) {
+    yt.href = CONFIG.youtube;
   }
 
   const target = CONFIG.launch ? new Date(CONFIG.launch).getTime() : NaN;
