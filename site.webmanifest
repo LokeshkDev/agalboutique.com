@@ -1,0 +1,11 @@
+{
+  "name": "Agal Boutique",
+  "short_name": "Agal",
+  "icons": [
+    { "src": "assets/img/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/img/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#3a1233",
+  "background_color": "#3a1233",
+  "display": "browser"
+}
